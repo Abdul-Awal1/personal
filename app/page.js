@@ -16,145 +16,142 @@ import {
   Moon,
   ArrowUpCircle,
   Award,
-  Database,
-  Wrench,
-  GraduationCap,
-  Building,
   Calendar,
-  Facebook,
   BookOpen,
-  FlaskConical,
   Cpu,
   Copy,
   CheckCircle,
   ChevronDown,
+  ShieldCheck,
+  Star,
+  FileText,
+  GraduationCap,
 } from "lucide-react";
 
-// --- Data from Md. Abdul Awal's CV with Logos ---
+
+// --- Data from Rumana Khatun's CV ---
 const workExperienceData = [
   {
     id: 1,
-    title: "Junior Software Engineer",
-    company: "Babylon Resources LTD.",
-    period: "Feb 2024 - Present",
+    title: "Software Quality Assurance",
+    company: "OVAL AD",
+    period: "Dec 2024 - Apr 2025",
     description:
-      "Developing and implementing diverse IT solutions to streamline business processes at a leading IT firm.",
-    logoUrl: "/babylon.png",
-    tags: ["Node.js", "React.js", "MongoDB", "RESTful APIs", "Tailwind CSS"],
+      "Contributed to ensuring product stability and quality through meticulous testing and collaboration with the development team.",
+    logoUrl: "/oval.jpg",
+    tags: ["Bug Reporting", "Test Cases", "Product Quality", "Collaboration"],
     details: [
-      "Writing server-side logic and APIs using Node.js.",
-      "Integrating Node.js with MongoDB for efficient data storage and retrieval.",
-      "Developing RESTful APIs to communicate with frontend components.",
-      "Implementing frontend features using React.js within MERN stack projects.",
-      "Ensuring cross-browser compatibility and responsiveness of web applications.",
+      "Identified and documented critical bugs, ensuring product stability.",
+      "Improved test coverage through comprehensive test cases.",
+      "Enhanced product quality via thorough testing and collaboration.",
+      "Worked closely with developers to resolve issues.",
+      "Maintained clear test reports and documentation.",
     ],
   },
   {
     id: 2,
-    title: "Jr. Software Developer (Intern)",
-    company: "Walton Hi-Tech Industries PLC",
-    period: "Aug 2023 - Nov 2023",
+    title: "Research Assistant (Data Analyst)",
+    company: "American International University",
+    period: "Jul 2024 - Oct 2024",
     description:
-      "Gained hands-on experience contributing to internal web applications in a large-scale corporate environment.",
-    logoUrl: "/walton.jpg",
-    tags: ["Grails Framework", "JavaScript", "MySQL", "Web Applications"],
+      "Assisted in data-related tasks, gaining hands-on experience in data analysis and research methodologies.",
+    logoUrl: "/aiub.jpeg",
+    tags: ["Data Annotation", "Data Analysis", "Excel", "Research"],
     details: [
-      "Contributed to the development of user-friendly web applications using the Grails Framework.",
-      "Managed and interacted with MySQL databases.",
-      "Implemented interactive web content and features with JavaScript.",
+      "Contributed to data annotation, leveling, and analysis using Excel and other tools.",
+      "Organized and interpreted research findings efficiently.",
+      "Gained hands-on experience, enhancing academic and professional growth.",
+      "Developed insights into the research process and practical applications.",
     ],
   },
   {
     id: 3,
-    title: "Teacher Assistant (Intern)",
-    company: "American International University-Bangladesh",
-    period: "Mar 2023 - Jul 2023",
+    title: "Software Quality Assurance (Intern)",
+    company: "Acote Group",
+    period: "Jan 2024 - Jun 2024",
     description:
-      "Assisted faculty and students in academic courses, focusing on web technologies and data structures.",
-    logoUrl: "/aiub.jpeg",
-    tags: ["Oracle", "JasperSoft", "Web Technologies", "Data Structures"],
+      "Gained foundational experience in software testing, including writing test cases and collaborating with developers.",
+    logoUrl: "/acote-logo.png",
+    tags: ["Internship", "Software Testing", "Bug Reporting", "Test Execution"],
     details: [
-      "Assisted students with their coursework and understanding of concepts.",
-      "Reviewed and provided feedback on student projects.",
-      "Prepared Project Requirements Documents (PRD) for 'Web Technologies' and 'Data Structures' courses.",
-      "Collaborated with faculty to enhance the learning environment.",
-      "Gained experience with Oracle for data management and JasperSoft for report creation.",
+      "Gained hands-on experience in software testing during my internship.",
+      "Wrote and executed test cases, identifying and reporting bugs.",
+      "Collaborated with the development team to ensure product quality.",
     ],
   },
 ];
 const projectsData = [
   {
     id: 1,
-    title: "EventBy",
+    title: "Hospital Management System",
     description:
-      "A comprehensive event management platform for creating, promoting, and managing events of all sizes.",
-    imageUrl: "/signupattendee.png",
-    tags: ["Event Management", "SaaS", "React", "Node.js"],
-    liveLink: "https://app.eventby.xyz/",
-    githubLink: "#",
-  },
-  {
-    id: 2,
-    title: "Reply Master AI",
-    description:
-      "An AI-powered browser extension to generate context-aware replies for social media platforms like LinkedIn and Twitter.",
-    imageUrl: "/replymaster.png",
-    tags: ["AI", "Browser Extension", "SaaS", "Next.js"],
-    liveLink: "https://replymaster.ai/",
-    githubLink: "#",
-  },
-  {
-    id: 3,
-    title: "Invoice Generator",
-    description:
-      "A user-friendly web application for creating, managing, and downloading professional invoices.",
-    imageUrl: "/invoice.jpg",
-    tags: ["Business Tool", "Invoicing", "JavaScript", "HTML/CSS"],
-    liveLink: "https://demo.templatemonster.com/demo/507286.html",
-    githubLink: "#",
-  },
-  {
-    id: 4,
-    title: "Foodipos",
-    description:
-      "A modern Point of Sale (POS) and ordering system designed for restaurants to streamline operations.",
-    imageUrl: "https://placehold.co/600x400/0ea5e9/ffffff?text=Foodipos",
-    tags: ["POS System", "Restaurant Tech", "React", "MongoDB"],
+      "A system to streamline patient data management, appointment scheduling, and record-keeping.",
+    imageUrl: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["HTML", "CSS", "SQL", "Python", "JIRA"],
     liveLink: "#",
     githubLink: "#",
   },
   {
-    id: 5,
-    title: "Herlancer",
+    id: 2,
+    title: "Titanic Survival Prediction",
     description:
-      "A freelance marketplace concept designed to connect clients with talented female professionals across various industries.",
-    imageUrl: "https://placehold.co/600x400/0ea5e9/ffffff?text=Herlancer",
-    tags: ["Marketplace", "Freelancing", "Web Platform", "Next.js"],
+      "A machine learning model to predict the survival of individuals on the Titanic, using data preprocessing, model training, and evaluation.",
+    imageUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Machine Learning", "Python", "Data Science", "Kaggle"],
     liveLink: "#",
     githubLink: "#",
   },
 ];
 
 const educationData = {
-  degree: "B.Sc in Computer Science and Engineering",
+  degree: "Bachelor of Computer Science Engineering",
   university: "American International University-Bangladesh",
-  period: "2019 - 2023",
-  cgpa: "3.85 / 4.00",
-  logoUrl: "https://i.imgur.com/2a6eD7g.png",
-  thesis: {
-    title: "A Machine Learning Approach for Predicting Software Defects",
-    description:
-      "Developed and evaluated a predictive model using various classification algorithms to identify potential software defects early in the development lifecycle, achieving high accuracy and precision.",
-  },
+  period: "2020 - 2024",
+  logoUrl: "/aiub.jpeg",
+  others: [
+    {
+      degree: "Higher Secondary Certificate in Science",
+      institution: "Govt. M.R.W. College, Bagura",
+      period: "2015",
+    },
+    {
+      degree: "Secondary School Certificate in Science",
+      institution: "M.G. High School, Gaibandha",
+      period: "2013",
+    },
+  ],
   courses: [
     "Data Structures & Algorithms",
     "Object-Oriented Programming",
     "Database Management Systems",
+    "Software Engineering",
+    "Computer Networks",
     "Web Technologies",
     "Artificial Intelligence",
-    "Computer Networks",
+    "Machine Learning",
   ],
 };
+
+const certificationsData = [
+  {
+    id: 1,
+    title: "Manual Testing Course",
+    issuer: "Udemy Academy",
+    icon: <Star className="text-yellow-500" />,
+    details: "Completed a comprehensive course on manual software testing, covering fundamental principles, test case design, execution, and bug reporting.",
+    certificateUrl: "https://placehold.co/800x600/eeeeee/222222?text=Certificate+of+Completion"
+  },
+  {
+    id: 2,
+    title: "SQA and Cyber Security",
+    issuer: "IT Training BD",
+    description:
+      "Ongoing training covering test case writing, API & performance testing, project management tools, SQL, version control, and automation techniques.",
+    icon: <ShieldCheck className="text-blue-500" />,
+    details: "Currently enrolled in an intensive training program focused on Software Quality Assurance and Cyber Security. Key areas of study include advanced testing methodologies, security protocols, and industry-standard tools.",
+    certificateUrl: "https://placehold.co/800x600/eeeeee/222222?text=Proof+of+Enrollment"
+  },
+];
 
 // Framer Motion-like component (simplified for this environment)
 const MotionDiv = ({
@@ -214,7 +211,7 @@ const SectionTitle = ({ title, subtitle }) => (
     transition={{ duration: 500 }}
     className="mb-16 text-center"
   >
-    <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-4">
+    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-600 dark:from-sky-400 dark:to-blue-500 mb-4">
       {title}
     </h2>
     <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -229,34 +226,44 @@ const Navbar = ({ onNavigate, darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
 
-  const navLinks = [
-    { href: "home", label: "Home", icon: <Home size={18} /> },
-    { href: "about", label: "About", icon: <User size={18} /> },
-    { href: "experience", label: "Experience", icon: <Briefcase size={18} /> },
-    {
-      href: "education",
-      label: "Education",
-      icon: <GraduationCap size={18} />,
-    },
-    { href: "contact", label: "Contact", icon: <Mail size={18} /> },
-  ];
+const navLinks = [
+  { href: "home", label: "Home", icon: <Home size={18} /> },
+  { href: "about", label: "About", icon: <User size={18} /> },
+  { href: "experience", label: "Experience", icon: <Briefcase size={18} /> },
+  { href: "projects", label: "Projects", icon: <Cpu size={18} /> },
+  { href: "education", label: "Education", icon: <GraduationCap size={18} /> },
+  { href: "contact", label: "Contact", icon: <Mail size={18} /> },
+];
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      let currentSection = "home";
-      navLinks.forEach((link) => {
-        const section = document.getElementById(link.href);
-        if (section && section.offsetTop <= window.scrollY + 100) {
-          currentSection = link.href;
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50);
+
+      const navbarHeight = document.querySelector("nav")?.offsetHeight || 80;
+      const scrollPosition = scrollY + navbarHeight + 100;
+
+      let currentSectionId = "home";
+
+      if (window.innerHeight + scrollY >= document.body.offsetHeight - 50) {
+        currentSectionId = "contact";
+      } else {
+        for (let i = navLinks.length - 1; i >= 0; i--) {
+          const link = navLinks[i];
+          const section = document.getElementById(link.href);
+          if (section && section.offsetTop <= scrollPosition) {
+            currentSectionId = link.href;
+            break;
+          }
         }
-      });
-      setActiveLink(currentSection);
+      }
+      setActiveLink(currentSectionId);
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [navLinks]);
+  }, []); // Removed navLinks dependency as it's static
 
   const handleNavClick = (href) => {
     onNavigate(href);
@@ -284,7 +291,7 @@ const Navbar = ({ onNavigate, darkMode, toggleDarkMode }) => {
               onClick={() => handleNavClick("home")}
               className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-600 dark:from-sky-400 dark:to-blue-500 hover:opacity-80 transition-opacity"
             >
-              Abdul Awal
+              RUMANA KHATUN
             </a>
           </MotionDiv>
           <div className="hidden md:flex items-center space-x-1">
@@ -532,7 +539,7 @@ const ParticleBackground = () => {
 
 // Hero Section Component
 const HeroSection = ({ onNavigate }) => {
-  const typedName = useTypewriter("M.d Abdul Awal", 90);
+  const typedName = useTypewriter("R.umana Khatun", 90);
 
   return (
     <section
@@ -553,8 +560,8 @@ const HeroSection = ({ onNavigate }) => {
             transition={{ duration: 500, delay: 0.5 }}
           >
             <img
-              src="/awal.jpg"
-              alt="Md. Abdul Awal"
+              src="/rumana.jpg" // Assuming the image is named rumana.jpg and in the public folder
+              alt="Rumana Khatun"
               className="w-36 h-36 md:w-44 md:h-44 rounded-full mx-auto mb-8 shadow-2xl border-4 border-white dark:border-slate-700 transform hover:scale-105 transition-transform duration-300"
             />
           </MotionDiv>
@@ -572,7 +579,7 @@ const HeroSection = ({ onNavigate }) => {
             </h1>
 
             <p className="text-2xl sm:text-3xl font-semibold text-slate-700 dark:text-slate-200 mb-6">
-              Junior Software Developer
+              Software Quality Assurance
             </p>
           </MotionDiv>
           <MotionDiv
@@ -581,9 +588,10 @@ const HeroSection = ({ onNavigate }) => {
             transition={{ duration: 500, delay: 0.9 }}
           >
             <p className="mt-4 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
-              A highly motivated developer proficient in web development and
-              programming, eager to apply my skills to drive innovation and
-              growth.
+              I am a hardworking and ambitious fresh graduate with a passion for
+              IT. I have strong communication skills and am eager to develop new
+              skills and gain practical experience while contributing to the
+              success of my workplace.
             </p>
           </MotionDiv>
           <MotionDiv
@@ -622,7 +630,7 @@ const HeroSection = ({ onNavigate }) => {
             className="mt-12 flex justify-center space-x-6"
           >
             <a
-              href="https://www.github.com/Abdul-Awal1"
+              href="https://github.com/Ruma-Jaman"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors transform hover:-translate-y-1"
@@ -630,12 +638,12 @@ const HeroSection = ({ onNavigate }) => {
               <Github size={30} />
             </a>
             <a
-              href="https://www.facebook.com/mahfuz.mintu.9/"
+              href="https://www.linkedin.com/in/rumana-khatun-02a9471ba/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors transform hover:-translate-y-1"
             >
-              <Facebook size={30} />
+              <Linkedin size={30} />
             </a>
           </MotionDiv>
         </MotionDiv>
@@ -662,20 +670,16 @@ const SkillBadge = ({ skill }) => (
 );
 
 const AboutSection = () => {
-  const languagesAndFrameworks = [
-    "C++",
-    "JavaScript",
-    "TypeScript",
-    "Node.js",
-    "NestJS",
-    "HTML",
-    "CSS",
-    "Tailwind CSS",
-    "PHP",
-    "React.js",
+  const manualTestingSkills = [
+    "Requirement Analysis",
+    "Test Planning",
+    "Test Case Design",
+    "Test Execution",
+    "Bug Reporting",
+    "Root Cause Analysis",
   ];
-  const databases = ["MongoDB", "MySQL", "SQL Developer", "PG Admin"];
-  const tools = ["Git", "IntelliJ IDEA", "VS Code"];
+  const toolsAndTech = ["Postman", "Jira", "Git", "JAVA", "Python", "MySQL"];
+  const concepts = ["SDLC", "STLC", "OOP"];
 
   return (
     <section
@@ -685,7 +689,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="About Me"
-          subtitle="My journey, skills, and passion for development"
+          subtitle="My skills, passion for quality, and professional background."
         />
         <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <MotionDiv
@@ -695,21 +699,16 @@ const AboutSection = () => {
             className="prose prose-lg dark:prose-invert max-w-none text-slate-700 dark:text-slate-300"
           >
             <p>
-              I am a dedicated and results-oriented Software Developer, a proud
-              graduate with a B.Sc in Computer Science and Engineering from the
-              American International University-Bangladesh (AIUB) with a CGPA of
-              3.85.
+              I am a hardworking and ambitious fresh graduate with a strong
+              passion for Information Technology, specializing in Software
+              Quality Assurance. My goal is to leverage my skills to ensure the
+              highest quality for software products.
             </p>
             <p>
-              My passion lies in crafting elegant solutions to complex problems,
-              particularly in web development and database management. I thrive
-              in collaborative environments and enjoy turning ideas into
-              tangible, high-quality applications.
-            </p>
-            <p>
-              I'm always eager to learn new technologies and contribute to
-              challenging projects. Feel free to explore my experience and get
-              in touch!
+              I possess strong communication skills and am always eager to learn
+              new technologies, develop new skills, and gain practical
+              experience. I am committed to contributing positively to the
+              success of any workplace I am a part of.
             </p>
           </MotionDiv>
           <MotionDiv
@@ -720,33 +719,33 @@ const AboutSection = () => {
           >
             <div>
               <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
+                <CheckCircle size={24} className="mr-3 text-sky-500" />
+                Manual Testing
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {manualTestingSkills.map((skill) => (
+                  <SkillBadge key={skill} skill={skill} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
                 <Cpu size={24} className="mr-3 text-sky-500" />
-                Languages & Frameworks
+                Tools & Technologies
               </h3>
               <div className="flex flex-wrap gap-3">
-                {languagesAndFrameworks.map((skill) => (
+                {toolsAndTech.map((skill) => (
                   <SkillBadge key={skill} skill={skill} />
                 ))}
               </div>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
-                <Database size={24} className="mr-3 text-sky-500" />
-                Databases
+                <BookOpen size={24} className="mr-3 text-sky-500" />
+                Concepts
               </h3>
               <div className="flex flex-wrap gap-3">
-                {databases.map((skill) => (
-                  <SkillBadge key={skill} skill={skill} />
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
-                <Wrench size={24} className="mr-3 text-sky-500" />
-                Tools
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {tools.map((skill) => (
+                {concepts.map((skill) => (
                   <SkillBadge key={skill} skill={skill} />
                 ))}
               </div>
@@ -802,10 +801,15 @@ const ExperienceSection = ({ onOpenModal }) => {
                         src={exp.logoUrl}
                         alt={`${exp.company} logo`}
                         className="w-full h-auto object-contain"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src =
+                            "https://placehold.co/150x50/a7a7a7/ffffff?text=Logo";
+                        }}
                       />
                     </div>
                   </div>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 sm:mt-2">
                     {exp.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-5">
@@ -833,6 +837,55 @@ const ExperienceSection = ({ onOpenModal }) => {
     </section>
   );
 };
+const ExperienceCard = ({ exp, onOpenModal }) => (
+    <>
+        <div className="flex items-start justify-between mb-4">
+            <div>
+                <p className="text-sm font-medium text-sky-600 dark:text-sky-400 mb-1">
+                    {exp.period}
+                </p>
+                <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                    {exp.title}
+                </h3>
+                <p className="text-md font-semibold text-slate-500 dark:text-slate-400">
+                    {exp.company}
+                </p>
+            </div>
+            <div className="bg-white p-2 rounded-md shadow-sm ml-4 flex-shrink-0">
+                <img
+                    src={exp.logoUrl}
+                    alt={`${exp.company} logo`}
+                    className="w-12 h-12 object-contain"
+                    onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://placehold.co/100x100/a7a7a7/ffffff?text=Logo";
+                    }}
+                />
+            </div>
+        </div>
+        <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+            {exp.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-5">
+            {exp.tags.map((tag) => (
+                <span
+                    key={tag}
+                    className="inline-block bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold px-3 py-1 rounded-full shadow-sm"
+                >
+                    {tag}
+                </span>
+            ))}
+        </div>
+        <button
+            onClick={() => onOpenModal(exp)}
+            className="w-full text-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800 transition-all duration-300 font-medium flex items-center justify-center transform group-hover:scale-105"
+        >
+            View Details <Eye size={18} className="ml-2" />
+        </button>
+    </>
+);
+
+
 // --- NEW Projects Section ---
 const ProjectsSection = () => {
   return (
@@ -843,9 +896,9 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="My Projects"
-          subtitle="A selection of applications I've built and contributed to."
+          subtitle="A selection of academic projects I've worked on."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projectsData.map((project, index) => (
             <MotionDiv
               key={project.id}
@@ -858,9 +911,9 @@ const ProjectsSection = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
@@ -879,22 +932,19 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className="mt-auto flex items-center space-x-4">
+                <div className="mt-auto">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex-1 text-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium flex items-center justify-center ${
+                    className={`w-full text-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium flex items-center justify-center ${
                       project.liveLink === "#"
                         ? "opacity-50 cursor-not-allowed"
                         : ""
                     }`}
                   >
-                    Live Demo <ExternalLink size={16} className="ml-2" />
+                    View Project <ExternalLink size={16} className="ml-2" />
                   </a>
-                  {/* <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className={`flex-1 text-center px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-800 transition-colors font-medium flex items-center justify-center ${project.githubLink === '#' ? 'opacity-50 cursor-not-allowed' : ''}`}>
-                                        GitHub <Github size={16} className="ml-2" />
-                                    </a> */}
                 </div>
               </div>
             </MotionDiv>
@@ -904,6 +954,53 @@ const ProjectsSection = () => {
     </section>
   );
 };
+
+const CertificationsSection = ({ onOpenModal }) => {
+    return (
+      <section
+        id="certifications"
+        className="py-20 md:py-28 bg-slate-50 dark:bg-slate-950 overflow-hidden"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle
+            title="Certifications & Training"
+            subtitle="My commitment to continuous learning and professional development."
+          />
+          <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+            {certificationsData.map((cert, index) => (
+              <MotionDiv
+                key={cert.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 500, delay: index * 0.2 }}
+                className="bg-white dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50 flex flex-col text-center items-center"
+              >
+                <div className="flex-shrink-0 bg-sky-100 dark:bg-sky-900/50 p-4 rounded-full mb-4">
+                   {React.cloneElement(cert.icon, { size: 32 })}
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white">
+                    {cert.title}
+                </h3>
+                <p className="font-semibold text-sky-600 dark:text-sky-400 mb-3">
+                    {cert.issuer}
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-400 flex-grow mb-4">
+                    {cert.description ? `${cert.description.substring(0, 70)}...` : 'Completed a comprehensive course.'}
+                </p>
+                <button
+                    onClick={() => onOpenModal(cert)}
+                    className="w-full mt-auto text-center px-4 py-2 bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-all duration-300 font-medium flex items-center justify-center"
+                >
+                    View Details <FileText size={16} className="ml-2" />
+                </button>
+              </MotionDiv>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+};
+
 const EducationSection = () => {
   return (
     <section
@@ -915,81 +1012,66 @@ const EducationSection = () => {
           title="Education"
           subtitle="My academic background and qualifications"
         />
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-          <MotionDiv
-            className="bg-gradient-to-br from-sky-50 to-blue-100 dark:from-slate-800 dark:to-sky-900/40 p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 h-full flex flex-col"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 600 }}
-          >
-            <div className="flex items-start gap-6 mb-4">
-              <div className="bg-white p-2 rounded-md shadow-md">
-                <img
-                  src="/aiub.jpeg"
-                  alt="AIUB Logo"
-                  className="h-30 w-30 object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
-                  {educationData.degree}
-                </h3>
-                <p className="text-lg font-semibold text-sky-600 dark:text-sky-400 mt-1">
-                  {educationData.university}
-                </p>
-              </div>
+        <div className="max-w-5xl mx-auto bg-gradient-to-br from-sky-50 to-blue-100 dark:from-slate-800/50 dark:to-sky-900/30 p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Main Degree Info */}
+                <MotionDiv
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 600 }}
+                >
+                    <div className="flex items-center gap-6 mb-4">
+                        <div className="bg-white p-2 rounded-md shadow-md">
+                            <img
+                            src={educationData.logoUrl}
+                            alt="AIUB Logo"
+                            className="h-20 w-20 object-contain"
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "https://placehold.co/100x100/a7a7a7/ffffff?text=AIUB";
+                            }}
+                            />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
+                            {educationData.degree}
+                            </h3>
+                            <p className="text-lg font-semibold text-sky-600 dark:text-sky-400 mt-1">
+                            {educationData.university}
+                            </p>
+                            <p className="text-slate-600 dark:text-slate-400 flex items-center mt-2 text-md">
+                                <Calendar size={16} className="mr-2" /> {educationData.period}
+                            </p>
+                        </div>
+                    </div>
+                     <div className="mt-6 space-y-4">
+                        {educationData.others.map((edu, index) => (
+                            <div key={index} className="bg-white/50 dark:bg-slate-700/30 p-4 rounded-lg">
+                                <h4 className="font-semibold text-slate-700 dark:text-slate-200">{edu.degree}</h4>
+                                <p className="text-sm text-slate-600 dark:text-slate-400">{edu.institution} - {edu.period}</p>
+                            </div>
+                        ))}
+                    </div>
+                </MotionDiv>
+                {/* Coursework */}
+                <MotionDiv
+                     initial={{ opacity: 0, x: 50 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 600, delay: 0.2 }}
+                >
+                    <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4 flex items-center">
+                        <BookOpen size={20} className="mr-3 text-sky-500" />
+                        Key Coursework
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                        {educationData.courses.map(course => (
+                            <div key={course} className="bg-white dark:bg-slate-700/50 px-4 py-2 rounded-full shadow-sm">
+                                <p className="font-medium text-slate-700 dark:text-slate-200 text-sm">{course}</p>
+                            </div>
+                        ))}
+                    </div>
+                </MotionDiv>
             </div>
-            <div className="space-y-2 mt-auto">
-              <p className="text-slate-600 dark:text-slate-400 flex items-center">
-                <Calendar size={16} className="mr-2" /> {educationData.period}
-              </p>
-              <p className="text-md font-medium text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-700 inline-block px-3 py-1 rounded-full">
-                <Award size={16} className="inline mr-1" /> CGPA:{" "}
-                {educationData.cgpa}
-              </p>
-            </div>
-          </MotionDiv>
-
-          <div className="space-y-8">
-            <MotionDiv
-              className="bg-white dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 600, delay: 0.2 }}
-            >
-              <h4 className="text-xl font-semibold text-slate-800 dark:text-white mb-3 flex items-center">
-                <FlaskConical size={20} className="mr-3 text-sky-500" /> Thesis
-                Project
-              </h4>
-              <p className="font-bold text-slate-700 dark:text-slate-200 mb-2">
-                {educationData.thesis.title}
-              </p>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                {educationData.thesis.description}
-              </p>
-            </MotionDiv>
-            <MotionDiv
-              className="bg-white dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 600, delay: 0.4 }}
-            >
-              <h4 className="text-xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
-                <BookOpen size={20} className="mr-3 text-sky-500" /> Relevant
-                Coursework
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {educationData.courses.map((course) => (
-                  <span
-                    key={course}
-                    className="bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm"
-                  >
-                    {course}
-                  </span>
-                ))}
-              </div>
-            </MotionDiv>
-          </div>
         </div>
       </div>
     </section>
@@ -1024,6 +1106,11 @@ const ExperienceModal = ({ experience, onClose }) => {
                 src={experience.logoUrl}
                 alt={`${experience.company} logo`}
                 className="h-10 w-auto object-contain"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "https://placehold.co/150x50/a7a7a7/ffffff?text=Logo";
+                }}
               />
             </div>
             <div>
@@ -1062,10 +1149,58 @@ const ExperienceModal = ({ experience, onClose }) => {
   );
 };
 
+const CertificationModal = ({ certification, onClose }) => {
+    if (!certification) return null;
+    return (
+      <div
+        className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[100] p-4"
+        style={{ animation: "fadeIn 0.3s ease-out forwards" }}
+        onClick={onClose}
+      >
+        <MotionDiv
+          className="bg-white dark:bg-slate-800 rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 300, ease: "easeOut" }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="p-6 md:p-8">
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-colors p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 z-10"
+            >
+              <X size={28} />
+            </button>
+            <div className="pr-8 flex items-start gap-4 mb-6">
+              <div className="flex-shrink-0 bg-sky-100 dark:bg-sky-900/50 p-3 rounded-full">
+                {React.cloneElement(certification.icon, { size: 24 })}
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
+                  {certification.title}
+                </h2>
+                <p className="text-xl font-semibold text-sky-600 dark:text-sky-400">
+                  {certification.issuer}
+                </p>
+              </div>
+            </div>
+            <p className="text-slate-700 dark:text-slate-300 mb-6">
+                {certification.details}
+            </p>
+            <div>
+                 <img src={certification.certificateUrl} alt={`${certification.title} Certificate`} className="rounded-lg shadow-lg w-full h-auto border border-slate-200 dark:border-slate-700" />
+            </div>
+          </div>
+        </MotionDiv>
+      </div>
+    );
+  };
+
+
 // --- Redesigned Contact Section ---
 const ContactSection = () => {
   const [copied, setCopied] = useState(false);
-  const email = "awalabdul.aiub@gmail.com";
+  const email = "rumajaman308@gmail.com";
 
   const handleCopy = () => {
     const textArea = document.createElement("textarea");
@@ -1084,16 +1219,15 @@ const ContactSection = () => {
   };
 
   const contactLinks = [
-    // { name: "LinkedIn", icon: <Linkedin size={24} />, href: "#" },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin size={24} />,
+      href: "https://www.linkedin.com/in/rumana-khatun-02a9471ba/",
+    },
     {
       name: "GitHub",
       icon: <Github size={24} />,
-      href: "https://www.github.com/Abdul-Awal1",
-    },
-    {
-      name: "Facebook",
-      icon: <Facebook size={24} />,
-      href: "https://www.facebook.com/mahfuz.mintu.9/",
+      href: "https://github.com/Ruma-Jaman",
     },
   ];
 
@@ -1111,23 +1245,28 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 600 }}
-          className="max-w-lg mx-auto bg-white dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700/50 rounded-2xl shadow-xl p-8"
+          className="max-w-4xl mx-auto bg-white dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700/50 rounded-2xl shadow-xl p-8 grid md:grid-cols-2 gap-10 items-center"
         >
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
+          <div className="text-center md:text-left">
+             <div className="inline-block bg-gradient-to-br from-sky-100 to-blue-200 dark:from-sky-900 dark:to-blue-900/50 p-4 rounded-full mb-6">
+                <Mail size={32} className="text-sky-600 dark:text-sky-400" />
+            </div>
+            <h3 className="text-3xl font-bold text-slate-800 dark:text-white">
               Get in Touch
             </h3>
-            <p className="text-slate-500 dark:text-slate-400 mt-2 mb-6">
-              The best way to reach me is via email.
+            <p className="text-slate-500 dark:text-slate-400 mt-2">
+              The best way to reach me is via email. I'm looking forward to hearing from you!
             </p>
-            <div className="relative">
+          </div>
+          <div>
+            <div className="relative mb-6">
               <div className="group flex items-center justify-between bg-slate-100 dark:bg-slate-700/50 p-4 rounded-lg border border-slate-200 dark:border-slate-600">
-                <span className="text-sky-600 dark:text-sky-400 font-mono text-sm sm:text-base">
+                <span className="text-sky-600 dark:text-sky-400 font-mono text-sm sm:text-base truncate">
                   {email}
                 </span>
                 <button
                   onClick={handleCopy}
-                  className="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                  className="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors flex-shrink-0 ml-2"
                 >
                   {copied ? (
                     <CheckCircle size={20} className="text-green-500" />
@@ -1145,14 +1284,7 @@ const ContactSection = () => {
                 </div>
               )}
             </div>
-            <div className="flex items-center my-6">
-              <div className="flex-grow border-t border-slate-300 dark:border-slate-600"></div>
-              <span className="flex-shrink mx-4 text-slate-400 dark:text-slate-500 text-sm">
-                or find me on
-              </span>
-              <div className="flex-grow border-t border-slate-300 dark:border-slate-600"></div>
-            </div>
-            <div className="flex justify-center space-x-6">
+            <div className="flex justify-center md:justify-start space-x-4">
               {contactLinks.map((link) => (
                 <a
                   key={link.name}
@@ -1187,9 +1319,9 @@ const Footer = () => {
     <footer className="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-slate-600 dark:text-slate-400">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Md. Abdul Awal. All rights reserved.
+          &copy; {new Date().getFullYear()} Rumana Khatun. All rights reserved.
         </p>
-        <p className="text-xs mt-1">Based in Mirpur, Dhaka, Bangladesh.</p>
+        <p className="text-xs mt-1">Based in Dhaka, Bangladesh.</p>
       </div>
       {showScrollTop && (
         <button
@@ -1206,6 +1338,7 @@ const Footer = () => {
 
 export default function App() {
   const [selectedExperience, setSelectedExperience] = useState(null);
+  const [selectedCertification, setSelectedCertification] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -1247,23 +1380,36 @@ export default function App() {
     }
   };
 
-  const handleOpenModal = (experience) => {
+  const handleOpenExperienceModal = (experience) => {
     setSelectedExperience(experience);
     document.body.style.overflow = "hidden";
   };
 
-  const handleCloseModal = () => {
+  const handleCloseExperienceModal = () => {
     setSelectedExperience(null);
+    document.body.style.overflow = "auto";
+  };
+
+  const handleOpenCertificationModal = (certification) => {
+    setSelectedCertification(certification);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseCertificationModal = () => {
+    setSelectedCertification(null);
     document.body.style.overflow = "auto";
   };
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === "Escape" && selectedExperience) handleCloseModal();
+      if (event.key === "Escape") {
+        if(selectedExperience) handleCloseExperienceModal();
+        if(selectedCertification) handleCloseCertificationModal();
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedExperience]);
+  }, [selectedExperience, selectedCertification]);
 
   useEffect(() => {
     const style = document.createElement("style");
@@ -1280,7 +1426,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="font-inter bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div className="font-inter bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300">
       <Navbar
         onNavigate={handleNavigate}
         darkMode={darkMode}
@@ -1289,8 +1435,9 @@ export default function App() {
       <main>
         <HeroSection onNavigate={handleNavigate} />
         <AboutSection />
-        <ExperienceSection onOpenModal={handleOpenModal} />
+        <ExperienceSection onOpenModal={handleOpenExperienceModal} />
         <ProjectsSection />
+        <CertificationsSection onOpenModal={handleOpenCertificationModal} />
         <EducationSection />
         <ContactSection />
       </main>
@@ -1298,7 +1445,13 @@ export default function App() {
       {selectedExperience && (
         <ExperienceModal
           experience={selectedExperience}
-          onClose={handleCloseModal}
+          onClose={handleCloseExperienceModal}
+        />
+      )}
+      {selectedCertification && (
+        <CertificationModal
+            certification={selectedCertification}
+            onClose={handleCloseCertificationModal}
         />
       )}
     </div>
