@@ -547,7 +547,7 @@ const ParticleBackground = () => {
 
 // Hero Section Component
 const HeroSection = ({ onNavigate }) => {
-  const typedName = useTypewriter("R.umana Khatun", 90);
+  const typedName = useTypewriter("R.UMANA KHATUN", 90);
 
   return (
     <section
