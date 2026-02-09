@@ -28,7 +28,6 @@ import {
   GraduationCap,
 } from "lucide-react";
 
-
 // --- Data from Rumana Khatun's CV ---
 const workExperienceData = [
   {
@@ -86,7 +85,8 @@ const projectsData = [
     title: "Hospital Management System",
     description:
       "A system to streamline patient data management, appointment scheduling, and record-keeping.",
-    imageUrl: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl:
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tags: ["HTML", "CSS", "SQL", "Python", "JIRA"],
     liveLink: "#",
     githubLink: "#",
@@ -96,7 +96,7 @@ const projectsData = [
     title: "Titanic Survival Prediction",
     description:
       "A machine learning model to predict the survival of individuals on the Titanic, using data preprocessing, model training, and evaluation.",
-    imageUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: "/TitanicSurvivalPrediction.jpg", // use relative path from public folder
     tags: ["Machine Learning", "Python", "Data Science", "Kaggle"],
     liveLink: "#",
     githubLink: "#",
@@ -138,8 +138,10 @@ const certificationsData = [
     title: "Manual Testing Course",
     issuer: "Udemy Academy",
     icon: <Star className="text-yellow-500" />,
-    details: "Completed a comprehensive course on manual software testing, covering fundamental principles, test case design, execution, and bug reporting.",
-    certificateUrl: "https://placehold.co/800x600/eeeeee/222222?text=Certificate+of+Completion"
+    details:
+      "Completed a comprehensive course on manual software testing, covering fundamental principles, test case design, execution, and bug reporting.",
+    certificateUrl:
+      "https://placehold.co/800x600/eeeeee/222222?text=Certificate+of+Completion",
   },
   {
     id: 2,
@@ -148,8 +150,10 @@ const certificationsData = [
     description:
       "Ongoing training covering test case writing, API & performance testing, project management tools, SQL, version control, and automation techniques.",
     icon: <ShieldCheck className="text-blue-500" />,
-    details: "Currently enrolled in an intensive training program focused on Software Quality Assurance and Cyber Security. Key areas of study include advanced testing methodologies, security protocols, and industry-standard tools.",
-    certificateUrl: "https://placehold.co/800x600/eeeeee/222222?text=Proof+of+Enrollment"
+    details:
+      "Currently enrolled in an intensive training program focused on Software Quality Assurance and Cyber Security. Key areas of study include advanced testing methodologies, security protocols, and industry-standard tools.",
+    certificateUrl:
+      "https://placehold.co/800x600/eeeeee/222222?text=Proof+of+Enrollment",
   },
 ];
 
@@ -173,7 +177,7 @@ const MotionDiv = ({
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (ref.current) {
@@ -226,14 +230,18 @@ const Navbar = ({ onNavigate, darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
 
-const navLinks = [
-  { href: "home", label: "Home", icon: <Home size={18} /> },
-  { href: "about", label: "About", icon: <User size={18} /> },
-  { href: "experience", label: "Experience", icon: <Briefcase size={18} /> },
-  { href: "projects", label: "Projects", icon: <Cpu size={18} /> },
-  { href: "education", label: "Education", icon: <GraduationCap size={18} /> },
-  { href: "contact", label: "Contact", icon: <Mail size={18} /> },
-];
+  const navLinks = [
+    { href: "home", label: "Home", icon: <Home size={18} /> },
+    { href: "about", label: "About", icon: <User size={18} /> },
+    { href: "experience", label: "Experience", icon: <Briefcase size={18} /> },
+    { href: "projects", label: "Projects", icon: <Cpu size={18} /> },
+    {
+      href: "education",
+      label: "Education",
+      icon: <GraduationCap size={18} />,
+    },
+    { href: "contact", label: "Contact", icon: <Mail size={18} /> },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -560,7 +568,7 @@ const HeroSection = ({ onNavigate }) => {
             transition={{ duration: 500, delay: 0.5 }}
           >
             <img
-              src="/rumana.jpg" // Assuming the image is named rumana.jpg and in the public folder
+              src="/rumana.jpeg" // Assuming the image is named rumana.jpg and in the public folder
               alt="Rumana Khatun"
               className="w-36 h-36 md:w-44 md:h-44 rounded-full mx-auto mb-8 shadow-2xl border-4 border-white dark:border-slate-700 transform hover:scale-105 transition-transform duration-300"
             />
@@ -838,53 +846,53 @@ const ExperienceSection = ({ onOpenModal }) => {
   );
 };
 const ExperienceCard = ({ exp, onOpenModal }) => (
-    <>
-        <div className="flex items-start justify-between mb-4">
-            <div>
-                <p className="text-sm font-medium text-sky-600 dark:text-sky-400 mb-1">
-                    {exp.period}
-                </p>
-                <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                    {exp.title}
-                </h3>
-                <p className="text-md font-semibold text-slate-500 dark:text-slate-400">
-                    {exp.company}
-                </p>
-            </div>
-            <div className="bg-white p-2 rounded-md shadow-sm ml-4 flex-shrink-0">
-                <img
-                    src={exp.logoUrl}
-                    alt={`${exp.company} logo`}
-                    className="w-12 h-12 object-contain"
-                    onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://placehold.co/100x100/a7a7a7/ffffff?text=Logo";
-                    }}
-                />
-            </div>
-        </div>
-        <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
-            {exp.description}
+  <>
+    <div className="flex items-start justify-between mb-4">
+      <div>
+        <p className="text-sm font-medium text-sky-600 dark:text-sky-400 mb-1">
+          {exp.period}
         </p>
-        <div className="flex flex-wrap gap-2 mb-5">
-            {exp.tags.map((tag) => (
-                <span
-                    key={tag}
-                    className="inline-block bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold px-3 py-1 rounded-full shadow-sm"
-                >
-                    {tag}
-                </span>
-            ))}
-        </div>
-        <button
-            onClick={() => onOpenModal(exp)}
-            className="w-full text-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800 transition-all duration-300 font-medium flex items-center justify-center transform group-hover:scale-105"
+        <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+          {exp.title}
+        </h3>
+        <p className="text-md font-semibold text-slate-500 dark:text-slate-400">
+          {exp.company}
+        </p>
+      </div>
+      <div className="bg-white p-2 rounded-md shadow-sm ml-4 flex-shrink-0">
+        <img
+          src={exp.logoUrl}
+          alt={`${exp.company} logo`}
+          className="w-12 h-12 object-contain"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src =
+              "https://placehold.co/100x100/a7a7a7/ffffff?text=Logo";
+          }}
+        />
+      </div>
+    </div>
+    <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+      {exp.description}
+    </p>
+    <div className="flex flex-wrap gap-2 mb-5">
+      {exp.tags.map((tag) => (
+        <span
+          key={tag}
+          className="inline-block bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold px-3 py-1 rounded-full shadow-sm"
         >
-            View Details <Eye size={18} className="ml-2" />
-        </button>
-    </>
+          {tag}
+        </span>
+      ))}
+    </div>
+    <button
+      onClick={() => onOpenModal(exp)}
+      className="w-full text-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800 transition-all duration-300 font-medium flex items-center justify-center transform group-hover:scale-105"
+    >
+      View Details <Eye size={18} className="ml-2" />
+    </button>
+  </>
 );
-
 
 // --- NEW Projects Section ---
 const ProjectsSection = () => {
@@ -907,13 +915,16 @@ const ProjectsSection = () => {
               transition={{ duration: 500, delay: index * 0.1 }}
               className="group bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden bg-slate-100 dark:bg-slate-800">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                  // UPDATED CLASS:
+                  // Changed 'h-56 object-cover' to 'h-auto object-contain'
+                  // This ensures the full image is visible without cropping
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
@@ -956,49 +967,51 @@ const ProjectsSection = () => {
 };
 
 const CertificationsSection = ({ onOpenModal }) => {
-    return (
-      <section
-        id="certifications"
-        className="py-20 md:py-28 bg-slate-50 dark:bg-slate-950 overflow-hidden"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="Certifications & Training"
-            subtitle="My commitment to continuous learning and professional development."
-          />
-          <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
-            {certificationsData.map((cert, index) => (
-              <MotionDiv
-                key={cert.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 500, delay: index * 0.2 }}
-                className="bg-white dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50 flex flex-col text-center items-center"
+  return (
+    <section
+      id="certifications"
+      className="py-20 md:py-28 bg-slate-50 dark:bg-slate-950 overflow-hidden"
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionTitle
+          title="Certifications & Training"
+          subtitle="My commitment to continuous learning and professional development."
+        />
+        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+          {certificationsData.map((cert, index) => (
+            <MotionDiv
+              key={cert.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 500, delay: index * 0.2 }}
+              className="bg-white dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50 flex flex-col text-center items-center"
+            >
+              <div className="flex-shrink-0 bg-sky-100 dark:bg-sky-900/50 p-4 rounded-full mb-4">
+                {React.cloneElement(cert.icon, { size: 32 })}
+              </div>
+              <h3 className="text-xl font-bold text-slate-800 dark:text-white">
+                {cert.title}
+              </h3>
+              <p className="font-semibold text-sky-600 dark:text-sky-400 mb-3">
+                {cert.issuer}
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-400 flex-grow mb-4">
+                {cert.description
+                  ? `${cert.description.substring(0, 70)}...`
+                  : "Completed a comprehensive course."}
+              </p>
+              <button
+                onClick={() => onOpenModal(cert)}
+                className="w-full mt-auto text-center px-4 py-2 bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-all duration-300 font-medium flex items-center justify-center"
               >
-                <div className="flex-shrink-0 bg-sky-100 dark:bg-sky-900/50 p-4 rounded-full mb-4">
-                   {React.cloneElement(cert.icon, { size: 32 })}
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 dark:text-white">
-                    {cert.title}
-                </h3>
-                <p className="font-semibold text-sky-600 dark:text-sky-400 mb-3">
-                    {cert.issuer}
-                </p>
-                <p className="text-sm text-slate-600 dark:text-slate-400 flex-grow mb-4">
-                    {cert.description ? `${cert.description.substring(0, 70)}...` : 'Completed a comprehensive course.'}
-                </p>
-                <button
-                    onClick={() => onOpenModal(cert)}
-                    className="w-full mt-auto text-center px-4 py-2 bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-all duration-300 font-medium flex items-center justify-center"
-                >
-                    View Details <FileText size={16} className="ml-2" />
-                </button>
-              </MotionDiv>
-            ))}
-          </div>
+                View Details <FileText size={16} className="ml-2" />
+              </button>
+            </MotionDiv>
+          ))}
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 };
 
 const EducationSection = () => {
@@ -1013,65 +1026,79 @@ const EducationSection = () => {
           subtitle="My academic background and qualifications"
         />
         <div className="max-w-5xl mx-auto bg-gradient-to-br from-sky-50 to-blue-100 dark:from-slate-800/50 dark:to-sky-900/30 p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-                {/* Main Degree Info */}
-                <MotionDiv
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 600 }}
-                >
-                    <div className="flex items-center gap-6 mb-4">
-                        <div className="bg-white p-2 rounded-md shadow-md">
-                            <img
-                            src={educationData.logoUrl}
-                            alt="AIUB Logo"
-                            className="h-20 w-20 object-contain"
-                            onError={(e) => {
-                                e.target.onerror = null;
-                                e.target.src = "https://placehold.co/100x100/a7a7a7/ffffff?text=AIUB";
-                            }}
-                            />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
-                            {educationData.degree}
-                            </h3>
-                            <p className="text-lg font-semibold text-sky-600 dark:text-sky-400 mt-1">
-                            {educationData.university}
-                            </p>
-                            <p className="text-slate-600 dark:text-slate-400 flex items-center mt-2 text-md">
-                                <Calendar size={16} className="mr-2" /> {educationData.period}
-                            </p>
-                        </div>
-                    </div>
-                     <div className="mt-6 space-y-4">
-                        {educationData.others.map((edu, index) => (
-                            <div key={index} className="bg-white/50 dark:bg-slate-700/30 p-4 rounded-lg">
-                                <h4 className="font-semibold text-slate-700 dark:text-slate-200">{edu.degree}</h4>
-                                <p className="text-sm text-slate-600 dark:text-slate-400">{edu.institution} - {edu.period}</p>
-                            </div>
-                        ))}
-                    </div>
-                </MotionDiv>
-                {/* Coursework */}
-                <MotionDiv
-                     initial={{ opacity: 0, x: 50 }}
-                     animate={{ opacity: 1, x: 0 }}
-                     transition={{ duration: 600, delay: 0.2 }}
-                >
-                    <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4 flex items-center">
-                        <BookOpen size={20} className="mr-3 text-sky-500" />
-                        Key Coursework
-                    </h3>
-                    <div className="flex flex-wrap gap-3">
-                        {educationData.courses.map(course => (
-                            <div key={course} className="bg-white dark:bg-slate-700/50 px-4 py-2 rounded-full shadow-sm">
-                                <p className="font-medium text-slate-700 dark:text-slate-200 text-sm">{course}</p>
-                            </div>
-                        ))}
-                    </div>
-                </MotionDiv>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Main Degree Info */}
+            <MotionDiv
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 600 }}
+            >
+              <div className="flex items-center gap-6 mb-4">
+                <div className="bg-white p-2 rounded-md shadow-md">
+                  <img
+                    src={educationData.logoUrl}
+                    alt="AIUB Logo"
+                    className="h-20 w-20 object-contain"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src =
+                        "https://placehold.co/100x100/a7a7a7/ffffff?text=AIUB";
+                    }}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
+                    {educationData.degree}
+                  </h3>
+                  <p className="text-lg font-semibold text-sky-600 dark:text-sky-400 mt-1">
+                    {educationData.university}
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-400 flex items-center mt-2 text-md">
+                    <Calendar size={16} className="mr-2" />{" "}
+                    {educationData.period}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-4">
+                {educationData.others.map((edu, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/50 dark:bg-slate-700/30 p-4 rounded-lg"
+                  >
+                    <h4 className="font-semibold text-slate-700 dark:text-slate-200">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      {edu.institution} - {edu.period}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </MotionDiv>
+            {/* Coursework */}
+            <MotionDiv
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 600, delay: 0.2 }}
+            >
+              <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4 flex items-center">
+                <BookOpen size={20} className="mr-3 text-sky-500" />
+                Key Coursework
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {educationData.courses.map((course) => (
+                  <div
+                    key={course}
+                    className="bg-white dark:bg-slate-700/50 px-4 py-2 rounded-full shadow-sm"
+                  >
+                    <p className="font-medium text-slate-700 dark:text-slate-200 text-sm">
+                      {course}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </MotionDiv>
+          </div>
         </div>
       </div>
     </section>
@@ -1150,52 +1177,55 @@ const ExperienceModal = ({ experience, onClose }) => {
 };
 
 const CertificationModal = ({ certification, onClose }) => {
-    if (!certification) return null;
-    return (
-      <div
-        className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[100] p-4"
-        style={{ animation: "fadeIn 0.3s ease-out forwards" }}
-        onClick={onClose}
+  if (!certification) return null;
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[100] p-4"
+      style={{ animation: "fadeIn 0.3s ease-out forwards" }}
+      onClick={onClose}
+    >
+      <MotionDiv
+        className="bg-white dark:bg-slate-800 rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 300, ease: "easeOut" }}
+        onClick={(e) => e.stopPropagation()}
       >
-        <MotionDiv
-          className="bg-white dark:bg-slate-800 rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 300, ease: "easeOut" }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="p-6 md:p-8">
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-colors p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 z-10"
-            >
-              <X size={28} />
-            </button>
-            <div className="pr-8 flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 bg-sky-100 dark:bg-sky-900/50 p-3 rounded-full">
-                {React.cloneElement(certification.icon, { size: 24 })}
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
-                  {certification.title}
-                </h2>
-                <p className="text-xl font-semibold text-sky-600 dark:text-sky-400">
-                  {certification.issuer}
-                </p>
-              </div>
+        <div className="p-6 md:p-8">
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-colors p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 z-10"
+          >
+            <X size={28} />
+          </button>
+          <div className="pr-8 flex items-start gap-4 mb-6">
+            <div className="flex-shrink-0 bg-sky-100 dark:bg-sky-900/50 p-3 rounded-full">
+              {React.cloneElement(certification.icon, { size: 24 })}
             </div>
-            <p className="text-slate-700 dark:text-slate-300 mb-6">
-                {certification.details}
-            </p>
             <div>
-                 <img src={certification.certificateUrl} alt={`${certification.title} Certificate`} className="rounded-lg shadow-lg w-full h-auto border border-slate-200 dark:border-slate-700" />
+              <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
+                {certification.title}
+              </h2>
+              <p className="text-xl font-semibold text-sky-600 dark:text-sky-400">
+                {certification.issuer}
+              </p>
             </div>
           </div>
-        </MotionDiv>
-      </div>
-    );
-  };
-
+          <p className="text-slate-700 dark:text-slate-300 mb-6">
+            {certification.details}
+          </p>
+          <div>
+            <img
+              src={certification.certificateUrl}
+              alt={`${certification.title} Certificate`}
+              className="rounded-lg shadow-lg w-full h-auto border border-slate-200 dark:border-slate-700"
+            />
+          </div>
+        </div>
+      </MotionDiv>
+    </div>
+  );
+};
 
 // --- Redesigned Contact Section ---
 const ContactSection = () => {
@@ -1248,14 +1278,15 @@ const ContactSection = () => {
           className="max-w-4xl mx-auto bg-white dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700/50 rounded-2xl shadow-xl p-8 grid md:grid-cols-2 gap-10 items-center"
         >
           <div className="text-center md:text-left">
-             <div className="inline-block bg-gradient-to-br from-sky-100 to-blue-200 dark:from-sky-900 dark:to-blue-900/50 p-4 rounded-full mb-6">
-                <Mail size={32} className="text-sky-600 dark:text-sky-400" />
+            <div className="inline-block bg-gradient-to-br from-sky-100 to-blue-200 dark:from-sky-900 dark:to-blue-900/50 p-4 rounded-full mb-6">
+              <Mail size={32} className="text-sky-600 dark:text-sky-400" />
             </div>
             <h3 className="text-3xl font-bold text-slate-800 dark:text-white">
               Get in Touch
             </h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2">
-              The best way to reach me is via email. I'm looking forward to hearing from you!
+              The best way to reach me is via email. I'm looking forward to
+              hearing from you!
             </p>
           </div>
           <div>
@@ -1403,8 +1434,8 @@ export default function App() {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
-        if(selectedExperience) handleCloseExperienceModal();
-        if(selectedCertification) handleCloseCertificationModal();
+        if (selectedExperience) handleCloseExperienceModal();
+        if (selectedCertification) handleCloseCertificationModal();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -1450,8 +1481,8 @@ export default function App() {
       )}
       {selectedCertification && (
         <CertificationModal
-            certification={selectedCertification}
-            onClose={handleCloseCertificationModal}
+          certification={selectedCertification}
+          onClose={handleCloseCertificationModal}
         />
       )}
     </div>
