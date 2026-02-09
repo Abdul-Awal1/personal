@@ -579,7 +579,7 @@ const HeroSection = ({ onNavigate }) => {
             transition={{ duration: 500, delay: 0.7 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-800 dark:text-white leading-tight mb-2">
-              Hi, I'm{" "}
+              Hello, I'm{" "}
               <span className="whitespace-pre bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-600 dark:from-sky-400 dark:to-blue-500 inline-block min-w-[15ch]">
                 {typedName}
               </span>
