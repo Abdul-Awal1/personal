@@ -30,23 +30,23 @@ import {
 
 // --- Data from Rumana Khatun's CV ---
 const workExperienceData = [
-  {
-    id: 1,
-    title: "Software Quality Assurance",
-    company: "OVAL AD",
-    period: "Dec 2024 - Apr 2025",
-    description:
-      "Contributed to ensuring product stability and quality through meticulous testing and collaboration with the development team.",
-    logoUrl: "/oval.jpg",
-    tags: ["Bug Reporting", "Test Cases", "Product Quality", "Collaboration"],
-    details: [
-      "Identified and documented critical bugs, ensuring product stability.",
-      "Improved test coverage through comprehensive test cases.",
-      "Enhanced product quality via thorough testing and collaboration.",
-      "Worked closely with developers to resolve issues.",
-      "Maintained clear test reports and documentation.",
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "Software Quality Assurance",
+  //   company: "OVAL AD",
+  //   period: "Dec 2024 - Apr 2025",
+  //   description:
+  //     "Contributed to ensuring product stability and quality through meticulous testing and collaboration with the development team.",
+  //   logoUrl: "/oval.jpg",
+  //   tags: ["Bug Reporting", "Test Cases", "Product Quality", "Collaboration"],
+  //   details: [
+  //     "Identified and documented critical bugs, ensuring product stability.",
+  //     "Improved test coverage through comprehensive test cases.",
+  //     "Enhanced product quality via thorough testing and collaboration.",
+  //     "Worked closely with developers to resolve issues.",
+  //     "Maintained clear test reports and documentation.",
+  //   ],
+  // },
   {
     id: 2,
     title: "Research Assistant (Data Analyst)",
@@ -63,21 +63,21 @@ const workExperienceData = [
       "Developed insights into the research process and practical applications.",
     ],
   },
-  {
-    id: 3,
-    title: "Software Quality Assurance (Intern)",
-    company: "Acote Group",
-    period: "Jan 2024 - Jun 2024",
-    description:
-      "Gained foundational experience in software testing, including writing test cases and collaborating with developers.",
-    logoUrl: "/acote-logo.png",
-    tags: ["Internship", "Software Testing", "Bug Reporting", "Test Execution"],
-    details: [
-      "Gained hands-on experience in software testing during my internship.",
-      "Wrote and executed test cases, identifying and reporting bugs.",
-      "Collaborated with the development team to ensure product quality.",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: "Software Quality Assurance (Intern)",
+  //   company: "Acote Group",
+  //   period: "Jan 2024 - Jun 2024",
+  //   description:
+  //     "Gained foundational experience in software testing, including writing test cases and collaborating with developers.",
+  //   logoUrl: "/acote-logo.png",
+  //   tags: ["Internship", "Software Testing", "Bug Reporting", "Test Execution"],
+  //   details: [
+  //     "Gained hands-on experience in software testing during my internship.",
+  //     "Wrote and executed test cases, identifying and reporting bugs.",
+  //     "Collaborated with the development team to ensure product quality.",
+  //   ],
+  // },
 ];
 const projectsData = [
   {
